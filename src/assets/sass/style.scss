@@ -1,5 +1,6 @@
-/* === fontをインポート === */
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+/* === フォントをインポート === */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Press+Start+2P&family=Source+Code+Pro:wght@600&display=swap');
+
 /* === 関数および機能をインポート === */
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -12,4 +13,4 @@
 
 
 /* === カスタムStyle === */
-@import "components/s-nav";
+@import "logo";
