@@ -109,10 +109,10 @@ $logo-size: 3.6em;
           position: relative;
           overflow: hidden;
         //   transition: background-color 250ms ease-in;
-        //   :hover {
-        //     background-color: $keyColor;
-        //     color: $background-color;
-        //   }
+          :hover {
+            background-color: $keyColor;
+            color: $background-color;
+          }
         }
 
         &_text {

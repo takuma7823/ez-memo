@@ -6,8 +6,10 @@
 </template>
 
 <script>
+import Version from "../../components/Version/Version";
 export default {
   name: "LaunchLayout",
+  components: {Version},
   created() {
     document.body.classList.add("launch_layout_body");
   }
