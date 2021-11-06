@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Top from '@/pages/Top/Top';
+import Top from "@/pages/Top/Top";
 import LaunchLayout from "@/layouts/LaunchLayout/LaunchLayout";
+import DefaultLayout from "@/layouts/DefaultLayout/DefaultLayout";
+import Elements from "../pages/Elements";
 
 const routes = [
   {
@@ -13,16 +15,23 @@ const routes = [
         component: Top,
       }
     ]
+  },
+  {
+    path: '/elements',
+    component: DefaultLayout,
+    children: [
+      {
+        path: '',
+        name: 'Elements',
+        component: Elements,
+      }
+    ]
   }
 ]
 
-//ルートから'#'を取り除いている？？
-//ルーティング情報を扱っているルーターの生成
-//ほぼ定型
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
 export default router
-
