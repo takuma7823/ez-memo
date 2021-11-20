@@ -5,15 +5,23 @@
       </div>
   </div>
   <logo/>
-  <scene-nav></scene-nav>
+  <scene-nav>
+    <scene-nav-link name="search">Search</scene-nav-link>
+    <scene-nav-link name="memos">Memos</scene-nav-link>
+    <scene-nav-link name="my_page">My Page</scene-nav-link>
+    <scene-nav-link name="login">Login</scene-nav-link>
+    <scene-nav-link name="register">Register</scene-nav-link>
+    <scene-nav-link name="settings">Settings</scene-nav-link>
+  </scene-nav>
 </template>
 
 <script>
 import Logo from "../../components/Logo/Logo";
 import SceneNav from "../../components/SceneNav/SceneNav";
+import SceneNavLink from "../../components/SceneNav/SceneNavLink";
 export default {
   name: "Top",
-  components: {SceneNav, Logo}
+  components: {Logo, SceneNav, SceneNavLink}
 }
 </script>
 

@@ -1,0 +1,15 @@
+.modal {
+    &-content {
+        border-radius: 0;
+        border-color: $btn-border-color;
+        background-color: $background-color-modal;
+    }
+
+    &-header, &-footer {
+        border-color: $btn-border-color;
+    }
+
+    &-body {
+        color: $primaryColor;
+    }
+}

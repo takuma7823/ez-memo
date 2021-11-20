@@ -9,6 +9,51 @@
                     <h4>Elements</h4>
                     <h5>Elements</h5>
                 </div>
+                <div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="corner left_top"></div>
+                        <div class="corner left_bottom"></div>
+                        <div class="corner right_top"></div>
+                        <div class="corner right_bottom"></div>
+                        create memo
+                    </button>
+                    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        </div>
+                        <div class="modal-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+                            amet cupiditate laboriosam sunt libero aliquam, consequatur alias ducimus
+                            adipisci nesciunt odit? Odio tenetur et itaque suscipit atque officiis debitis qui.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, amet cupiditate
+                            laboriosam sunt libero aliquam, consequatur alias ducimus adipisci nesciunt odit?
+                            Odio tenetur et itaque suscipit atque officiis debitis qui. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Accusamus, amet cupiditate laboriosam sunt libero aliquam,
+                            consequatur alias ducimus adipisci nesciunt odit? Odio tenetur et itaque suscipit atque
+                            officiis debitis qui.
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-primary">
+                                <div class="corner left_top"></div>
+                                <div class="corner left_bottom"></div>
+                                <div class="corner right_top"></div>
+                                <div class="corner right_bottom"></div>
+                                Save changes
+                            </button>
+                            <button type="button" class="btn btn-secondary m-2" data-bs-dismiss="modal">
+                                <div class="corner left_top"></div>
+                                <div class="corner left_bottom"></div>
+                                <div class="corner right_top"></div>
+                                <div class="corner right_bottom"></div>
+                                Close
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
             <div class="row mt-4">
                 <div class="col-12">
