@@ -21,6 +21,11 @@ export default {
       }
     }, 3000)
   },
+  watch: {
+    scene: function (newScene, oldScene) {
+      this.$emit('sceneChanged', newScene)
+    }
+  }
 }
 </script>
 
