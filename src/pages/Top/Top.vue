@@ -1,9 +1,17 @@
 <template>
   <div class="top">
-      <div class="glow-bg">
-        <div class="glow"></div>
-      </div>
+    <div class="glow-bg">
+      <div class="glow"></div>
+    </div>
+    <loading ref="loading"></loading>
     <logo :class="{'logo_pos': positionChange}" />
+    <div class="search form" :style="{'opacity': positionChange ? 1 : 0}">
+      <div class="row">
+        <div class="col-12">
+          <input type="text" placeholder="Enter keyword to search" class="form-control">
+        </div>
+      </div>
+    </div>
     <scene-nav :class="{'nav_pos': positionChange}" v-on:scene-changed="sceneChanged($event)">
       <scene-nav-link name="search">
         <template v-slot:text>
@@ -57,13 +65,13 @@
 
     <!-- New User Modal -->
     <div class="modal fade" id="newUserModal" tabindex="-1" aria-labelledby="newUserModal" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
           </div>
           <div class="modal-body">
-            <form>
+            <div class="form">
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name">
@@ -80,7 +88,7 @@
                 <label for="re-password" class="form-label">Re-Password</label>
                 <input type="password" class="form-control" id="re-password">
               </div>
-            </form>
+            </div>
           </div>
           <div class="modal-footer justify-content-center">
             <button type="button" class="btn btn-primary">
@@ -103,13 +111,13 @@
     </div>
     <!-- Settings Modal -->
     <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="newUserModal" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
           </div>
           <div class="modal-body">
-            <form>
+            <div class="form">
               <div class="mb-3">
                 <label for="settings-name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="settings-name">
@@ -126,7 +134,7 @@
                 <label for="re-new-password" class="form-label">Re-Password</label>
                 <input type="password" class="form-control" id="re-new-password">
               </div>
-            </form>
+            </div>
           </div>
           <div class="modal-footer justify-content-center">
             <button type="button" class="btn btn-primary">
@@ -152,10 +160,10 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="loginModalLabel">Login User</h5>
+            <h5 class="modal-title" id="loginModalLabel">Create User</h5>
           </div>
           <div class="modal-body">
-            <form>
+            <div class="form">
               <div class="mb-3">
                 <label for="login-email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="login-email">
@@ -164,7 +172,7 @@
                 <label for="login-password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="login-password">
               </div>
-            </form>
+            </div>
           </div>
           <div class="modal-footer justify-content-center">
             <button type="button" class="btn btn-primary">
@@ -192,13 +200,19 @@
 import Logo from "../../components/Logo/Logo";
 import SceneNav from "../../components/SceneNav/SceneNav";
 import SceneNavLink from "@/components/SceneNav/SceneNavLink";
+import Loading from "@/components/Loading/Loading";
 export default {
   name: "Top",
-  components: {SceneNavLink, SceneNav, Logo},
+  components: {Loading, SceneNavLink, SceneNav, Logo},
   data() {
     return {
       positionChange: false
     }
+  },
+  created() {
+    setTimeout(() => {
+      this.$refs.loading.hide()
+    }, 1500)
   },
   methods: {
     sceneChanged (newScene) {

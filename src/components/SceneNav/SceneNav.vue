@@ -11,21 +11,19 @@ export default {
   name: "SceneNav",
   data() {
     return {
-      scene: '',
+      scene: ''
     }
   },
   created() {
     setTimeout(() => {
-      if (this.scene === '') {
-        this.scene = 'register'
-      }
-    }, 3000)
+      this.scene = 'register'
+    }, 1000)
   },
   watch: {
     scene: function (newScene, oldScene) {
       this.$emit('sceneChanged', newScene)
     }
-  }
+  },
 }
 </script>
 

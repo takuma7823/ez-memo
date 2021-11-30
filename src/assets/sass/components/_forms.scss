@@ -1,5 +1,5 @@
-form {
-    color: $keyColor;
+.form {
+  color: $keyColor;
 
   .form-control {
     border-radius: 0;
@@ -36,6 +36,4 @@ form {
       border-radius: 0;
     }
   }
-
-
 }

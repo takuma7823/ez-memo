@@ -1,7 +1,7 @@
 $logo-size: 3.6em;
 $logo-size-sm: 2.6em;
 .logo {
-  transition: 1500ms;
+  transition: 1000ms;
   h1 {
     font: $logo-size 'Press Start 2P', cursive;
     @include media-breakpoint-down(sm) {
@@ -12,16 +12,16 @@ $logo-size-sm: 2.6em;
     margin: 0;
     color: $keyColor;
 
-    // span {
-    //   margin-top: 6px;
-    // }
+    span {
+      margin-top: 6px;
+    }
 
     .memo {
       display: inline-block;
       padding: 1px;
       position: relative;
       box-sizing: inherit;
-    //   margin-left: 4px;
+      margin-left: 4px;
       background: none;
       border: none;
       color: $keyColor;
@@ -113,7 +113,7 @@ $logo-size-sm: 2.6em;
           display: block;
           position: relative;
           overflow: hidden;
-        //   transition: background-color 250ms ease-in;
+          transition: background-color 250ms ease-in;
           :hover {
             background-color: $keyColor;
             color: $background-color;
