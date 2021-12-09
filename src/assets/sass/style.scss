@@ -14,8 +14,12 @@
 
 /* === カスタムStyle === */
 @import "base";
+@import "animation";
 @import "logo";
 @import "components/buttons";
 @import "components/forms";
 @import "components/text";
 @import "components/modal";
+@import "components/alert";
+@import "components/card";
+@import "components/badge";
